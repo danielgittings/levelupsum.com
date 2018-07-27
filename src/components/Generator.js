@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import Paragraph from './Paragraph';
-// import dictionary from '../data/words';
+import Controls from './Controls';
 import dictionary from '../data/words';
+
+const MainContainer = styled.main`
+  max-width: 800px;
+  margin: 0 auto;
+`;
 
 class Generator extends Component {
   state = {
@@ -65,7 +71,7 @@ class Generator extends Component {
 
       // Get a random number that defines the number of words per sentence
       // For this app we define a sentence as being between 8 and 15 words.
-      const numWords = this.getRandomNumber(8, 15);
+      const numWords = this.getRandomNumber(8, 12);
 
 
       for (let i = 1; i <= numWords; i++) {
@@ -119,22 +125,17 @@ class Generator extends Component {
 
   render() {
     return (
-      <div style={{ width: '600px'}}>
-        <form action="">
-          <select onChange={this.setNumberOfParagraphs} name="paragraphs">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-        </form>
-        { this.state.paragraphs.map((item, index) =>
-          <Paragraph
-            key={`paragraph-${index}`}
-            paragraph={index}
-            words={item} />) }
-      </div>
+      <MainContainer>
+        <Controls setNumberOfParagraphs={this.setNumberOfParagraphs} />
+        {
+          this.state.paragraphs.map((item, index) =>
+            <Paragraph
+              key={`paragraph-${index}`}
+              paragraph={index}
+              words={item} />
+            )
+        }
+      </MainContainer>
     );
   }
 }

@@ -17,7 +17,7 @@ const words = [
   'bungie',
   'capcom',
   'codemasters',
-  'crystal Dynamics',
+  'crystal dynamics',
   'crytek',
   'cd projekt red',
   'epic',
