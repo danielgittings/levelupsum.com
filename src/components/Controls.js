@@ -1,9 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const ControlsForm = styled.form`
+  background-color: white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  margin-bottom: 40px;
+`;
+
 const ButtonWrapper = styled.fieldset`
   border: none;
-  margin: 0 0 50px;
+  margin: 0;
   padding: 0;
 `;
 
@@ -18,8 +25,7 @@ const LabelButton = styled.label`
   padding: 10px 30px;
 
   &:hover {
-    background-color: red;
-    color: white;
+    background-color: hsl(219, 79%, 95%);
   }
 `;
 
@@ -41,13 +47,13 @@ const HiddenRadio = styled.input`
   border: 0;
 
   &:checked + label {
-    background-color: green;
+    background-color: hsl(219, 79%, 80%);
     color: white;
   }
 `;
 
 const Controls = props => (
-  <form onChange={props.setNumberOfParagraphs}>
+  <ControlsForm onChange={props.setNumberOfParagraphs}>
     <ButtonWrapper>
       <ControlIntruction>Select number of paragraphs</ControlIntruction>
 
@@ -78,7 +84,7 @@ const Controls = props => (
         </div>
       </ParagraphsOptions>
     </ButtonWrapper>
-  </form>
+  </ControlsForm>
 );
 
 export default Controls;
