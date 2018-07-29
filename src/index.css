@@ -3,6 +3,8 @@ body {
   padding: 0;
   font-family: sans-serif;
   font-size: 16px;
+  min-height: 100vh;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 html {

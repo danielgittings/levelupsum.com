@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 const MainHeader = styled.header`
   text-align: center;
-  padding: 150px 0 75px;
+  padding: 150px 0 100px;
+  background-color: hsl(219, 79%, 72%);
 
   > div {
     max-width: 800px;
@@ -12,12 +13,17 @@ const MainHeader = styled.header`
 `;
 
 const Title = styled.h1`
-  margin-top: 0;
-  font-size: 50px;
+  margin: 0 0 30px;
+  font-size: 100px;
+  font-family: 'Luckiest Guy';
+  font-weight: 400;
+  text-shadow: 8px 8px 3px rgba(0, 0, 0, 0.1);
+  color: white;
 `;
 
 const Subheading = styled.h3`
   font-size: 28px;
+  font-family: 'Open Sans';
 `;
 
 const Header = () => (

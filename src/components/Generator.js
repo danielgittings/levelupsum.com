@@ -6,7 +6,7 @@ import dictionary from '../data/words';
 
 const MainContainer = styled.main`
   max-width: 800px;
-  margin: 0 auto;
+  margin: -75px auto 0;
 `;
 
 class Generator extends Component {
