@@ -12,8 +12,9 @@ const MainContainer = styled.main`
 class Generator extends Component {
   state = {
     dictionary: [],
-    numParagraphs: null,
-    paragraphs: []
+    numParagraphs: 1,
+    paragraphs: [],
+    pTags: false
   }
 
   /**
@@ -43,9 +44,9 @@ class Generator extends Component {
     for (let paraNum = 1; paraNum <= numParagraphs; paraNum++) {
       const sentences = this.createSentences();
 
-      this.setState(prevState => {
-        paragraphs: prevState.paragraphs.push(sentences)
-      });
+      this.setState(prevState => ({
+        paragraphs: [...prevState.paragraphs, sentences]
+      }));
     }
   }
 
@@ -113,6 +114,14 @@ class Generator extends Component {
     }, this.createText);
   }
 
+  toggleTags = (e) => {
+    e.preventDefault();
+
+    this.setState({
+      pTags: !this.state.pTags
+    });
+  }
+
   /**
    * Loads the dictionary from imported data
    * on component mount
@@ -120,19 +129,20 @@ class Generator extends Component {
   componentDidMount() {
     this.setState({
       dictionary
-    });
+    }, this.createText);
   }
 
   render() {
     return (
       <MainContainer>
-        <Controls setNumberOfParagraphs={this.setNumberOfParagraphs} />
+        <Controls toggleTags={this.toggleTags} setNumberOfParagraphs={this.setNumberOfParagraphs} />
         {
           this.state.paragraphs.map((item, index) =>
             <Paragraph
               key={`paragraph-${index}`}
               paragraph={index}
-              words={item} />
+              words={item}
+              pTags={this.state.pTags} />
             )
         }
       </MainContainer>

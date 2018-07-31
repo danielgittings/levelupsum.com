@@ -3,9 +3,11 @@ import styled from 'styled-components';
 
 const ControlsForm = styled.form`
   background-color: white;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  /*box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);*/
+  box-shadow: 0px 0px 70px 20px rgba(0, 0, 0, 0.1);
   padding: 50px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  border-radius: 5px;
 `;
 
 const ButtonWrapper = styled.fieldset`
@@ -23,17 +25,19 @@ const LabelButton = styled.label`
   cursor: pointer;
   display: block;
   padding: 10px 30px;
+  border-radius: 5px;
 
   &:hover {
     background-color: hsl(219, 79%, 95%);
   }
 `;
 
-const ControlIntruction = styled.legend`
-  font-size: 22px;
+const ControlInstruction = styled.legend`
+  font-size: 20px;
   display: block;
   text-align: center;
   padding: 0 0 30px;
+  width: 100%;
 `;
 
 const HiddenRadio = styled.input`
@@ -55,11 +59,17 @@ const HiddenRadio = styled.input`
 const Controls = props => (
   <ControlsForm onChange={props.setNumberOfParagraphs}>
     <ButtonWrapper>
-      <ControlIntruction>Select number of paragraphs</ControlIntruction>
+      <ControlInstruction>How many paragraphs do you want?</ControlInstruction>
 
       <ParagraphsOptions>
         <div>
-          <HiddenRadio id="input1" type="radio" name="paragraphs" value="1" />
+          <HiddenRadio
+            defaultChecked
+            id="input1"
+            type="radio"
+            name="paragraphs"
+            value="1"
+          />
           <LabelButton htmlFor="input1">1</LabelButton>
         </div>
 
@@ -83,6 +93,7 @@ const Controls = props => (
           <LabelButton htmlFor="input5">5</LabelButton>
         </div>
       </ParagraphsOptions>
+      <button onClick={props.toggleTags}>Show {'<p>'}</button>
     </ButtonWrapper>
   </ControlsForm>
 );

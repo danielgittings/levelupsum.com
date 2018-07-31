@@ -23,14 +23,15 @@ const Title = styled.h1`
 
 const Subheading = styled.h3`
   font-size: 28px;
-  font-family: 'Open Sans';
+  color: white;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
 `;
 
 const Header = () => (
   <MainHeader>
     <div>
-      <Title>Gamer ipsum</Title>
-      <Subheading>Placeholder text for gamer types</Subheading>
+      <Title>Lorem 1upsum</Title>
+      <Subheading>Videogame placeholder text</Subheading>
     </div>
   </MainHeader>
 );

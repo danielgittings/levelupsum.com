@@ -21,39 +21,16 @@ const MainFooter = styled.footer`
       }
     }
   }
-
-  > ul {
-    list-style-type: none;
-
-    > li {
-      display: inline;
-      font-size: 0.8rem;
-
-      a {
-        color: hsl(219, 79%, 60%);
-        text-decoration: none;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
 `;
 
 const Footer = () => (
   <MainFooter>
     <p>
-      Made by <a href="https://danielgittings.com">Daniel Gittings</a>
+      Made by <a href="https://github.com/dgittings">Daniel Gittings</a>
     </p>
-    <ul>
-      <li>
-        <a href="https://github.com/dgittings">GitHub</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/danielgittings">Twitter</a>
-      </li>
-    </ul>
+    <p>
+      <a href="https://github.com/dgittings">GitHub</a>
+    </p>
   </MainFooter>
 );
 
