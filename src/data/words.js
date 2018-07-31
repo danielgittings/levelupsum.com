@@ -7,7 +7,7 @@ const words = [
   'valve',
   'blizzard',
   'activision',
-  'ea',
+  'EA',
   'ubisoft',
   'square enix',
   'bandai',
@@ -19,7 +19,7 @@ const words = [
   'codemasters',
   'crystal dynamics',
   'crytek',
-  'cd projekt red',
+  'CD projekt red',
   'epic',
   'fromsoftware',
   'gearbox',
@@ -34,7 +34,7 @@ const words = [
   'bioware',
   'DICE',
   'game freak',
-  'id software',
+  'ID software',
   'infinity ward',
   'media molecule',
   'midway',
@@ -54,29 +54,29 @@ const words = [
   'playstation',
   'xbox',
   'gameboy',
-  'snes',
-  'nes',
-  'n64',
+  'SNES',
+  'NES',
+  'N64',
   'gamecube',
   'wii',
   'wii u',
   'switch',
-  'psp',
+  'PSP',
   '360',
   'pc',
   'xbox one x',
-  'ps4',
-  'ps3',
-  'ps2',
-  'ps1',
+  'PS4',
+  'PS3',
+  'PS2',
+  'PS1',
   'game gear',
   'ngage',
-  'ds',
-  '3ds',
+  'DS',
+  '3DS',
   'gameboy color',
   'gameboy pocket',
   'gameboy sp',
-  '2ds',
+  '2DS',
 
   // Games
   'fortnite',
@@ -192,6 +192,11 @@ const words = [
   'little big planet',
   'killzone',
   'pikmin',
+  'advance wars',
+  'borderlands',
+  'f-zero',
+  'burnout',
+  '',
 
   // Characters
   'mario',
@@ -251,7 +256,7 @@ const words = [
   'psn',
   'steam',
   'uplay',
-  '',
+  'origin',
 
   // Weapons
   'master sword',
@@ -292,6 +297,8 @@ const words = [
   'axe',
   'sword',
   'spear',
+  'bazooka',
+  'RPG',
   '',
 
   // Items
@@ -302,6 +309,9 @@ const words = [
   'ammo',
   'heart container',
   '1up',
+  'bandages',
+  'medkit',
+  'cardboard box',
   '',
 
   // Interface
@@ -309,11 +319,11 @@ const words = [
   'magic bar',
   'inventory',
   'pause screen',
-  'loading',
-  '',
+  'loading screen',
+  'loading bar',
+  'minimap',
 
   // Terms
-  'loading screen',
   'level',
   'checkpoint',
   'save point',
@@ -341,6 +351,12 @@ const words = [
   '1v1',
   'vr',
   'headshot',
+  'headshotted',
+  'defeated',
+  'nuked',
+  'eliminated',
+  'raid',
+  'esports',
   'level up',
   'demo',
   'sniped',
@@ -356,14 +372,12 @@ const words = [
   'fps',
   'rpg',
   'moba',
-  '',
 
   // Locations
   'mushroom kingdom',
   'hyrule',
   'kanto',
   'azaroth',
-  '',
 
   // Controllers
   'joystick',
@@ -372,9 +386,6 @@ const words = [
   'mouse',
   'controller',
   'd-pad',
-  '',
-
-  //
 ];
 
 export default words;
