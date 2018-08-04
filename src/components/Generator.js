@@ -7,6 +7,7 @@ import dictionary from '../data/words';
 const MainContainer = styled.main`
   max-width: 800px;
   margin: -75px auto 0;
+  padding: 0 20px;
 `;
 
 class Generator extends Component {
@@ -135,7 +136,7 @@ class Generator extends Component {
   render() {
     return (
       <MainContainer>
-        <Controls toggleTags={this.toggleTags} setNumberOfParagraphs={this.setNumberOfParagraphs} />
+        <Controls numParagraphs={this.state.numParagraphs} toggleTags={this.toggleTags} setNumberOfParagraphs={this.setNumberOfParagraphs} />
         {
           this.state.paragraphs.map((item, index) =>
             <Paragraph

@@ -386,6 +386,12 @@ const words = [
   'mouse',
   'controller',
   'd-pad',
+
+  // Gaming verbs
+  'killed',
+  'played',
+  'jumped',
+  'ran'
 ];
 
 export default words;
