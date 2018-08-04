@@ -56,7 +56,7 @@ const Header = () => (
   <MainHeader>
     <div>
       <Title>Level upsum</Title>
-      <Subheading>Videogame placeholder text</Subheading>
+      <Subheading>Video game placeholder text</Subheading>
     </div>
   </MainHeader>
 );

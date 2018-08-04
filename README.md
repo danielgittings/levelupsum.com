@@ -1,3 +1,3 @@
 ### Level Upsum
 
-Placeholder text generator for videogame fans.
+Placeholder text generator for video game fans.
