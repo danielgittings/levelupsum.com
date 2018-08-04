@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 const ControlsForm = styled.div`
   background-color: white;
-  /*box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);*/
   box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-bottom: 40px;
@@ -43,7 +42,7 @@ const ControlsForm = styled.div`
   }
 `;
 
-const ElSelectorino = styled.select`
+const PlaceholderSelector = styled.select`
   background-color: transparent;
   border: 3px solid hsl(193, 99%, 47%);
   margin: 0 20px 0 0;
@@ -67,6 +66,17 @@ const FormContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+  }
 `;
 
 const Controls = props => (
@@ -74,22 +84,24 @@ const Controls = props => (
     <span>Give me</span>
     <FormContainer>
       <form onChange={props.setNumberOfParagraphs}>
-        <ElSelectorino name="" id="paragraph-count">
+        <label htmlFor="paragraph-count">Paragraph count</label>
+        <PlaceholderSelector id="paragraph-count">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
           <option value="5">5</option>
-        </ElSelectorino>
+        </PlaceholderSelector>
       </form>
       <span>{props.numParagraphs > 1 ? 'paragraphs' : 'paragraph'}</span>
     </FormContainer>
     <FormContainer>
       <form onChange={props.toggleTags}>
-        <ElSelectorino name="" id="p-tag-selector">
+        <label htmlFor="p-tag-selector">Paragraph count</label>
+        <PlaceholderSelector id="p-tag-selector">
           <option value="with">without</option>
           <option value="without">with</option>
-        </ElSelectorino>
+        </PlaceholderSelector>
       </form>
       <span>{'<p>'} tags</span>
     </FormContainer>

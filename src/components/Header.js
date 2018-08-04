@@ -4,7 +4,6 @@ import styled from 'styled-components';
 const MainHeader = styled.header`
   text-align: center;
   padding: 80px 20px 100px;
-  /*background-color: hsl(219, 79%, 72%);*/
   background-color: #039e61;
 
   @media all and (min-width: 500px) {
