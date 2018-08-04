@@ -8,7 +8,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 WebFont.load({
   google: {
-    families: ['Luckiest Guy:400', 'Raleway:400', 'Open Sans:400'],
+    families: ['Luckiest Guy:400', 'Open Sans:400'],
   },
 });
 

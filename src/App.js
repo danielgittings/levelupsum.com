@@ -4,10 +4,6 @@ import Footer from './components/Footer';
 import Generator from './components/Generator';
 
 class App extends Component {
-  state = {
-    words: []
-  }
-
   render() {
     return (
       <div className="App">
