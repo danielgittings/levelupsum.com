@@ -3,8 +3,13 @@ import styled from 'styled-components';
 
 const MainHeader = styled.header`
   text-align: center;
-  padding: 150px 0 100px;
-  background-color: hsl(219, 79%, 72%);
+  padding: 80px 20px 100px;
+  /*background-color: hsl(219, 79%, 72%);*/
+  background-color: #039e61;
+
+  @media all and (min-width: 500px) {
+    padding: 150px 20px 100px;
+  }
 
   > div {
     max-width: 800px;
@@ -13,24 +18,45 @@ const MainHeader = styled.header`
 `;
 
 const Title = styled.h1`
-  margin: 0 0 30px;
-  font-size: 100px;
+  margin: 0 0 10px;
+  font-size: 40px;
   font-family: 'Luckiest Guy';
   font-weight: 400;
   text-shadow: 8px 8px 3px rgba(0, 0, 0, 0.1);
-  color: white;
+  color: #fbfbff;
+
+  @media all and (min-width: 400px) {
+    font-size: 70px;
+  }
+
+  @media all and (min-width: 575px) {
+    font-size: 85px;
+  }
+
+  @media all and (min-width: 760px) {
+    font-size: 100px;
+  }
 `;
 
 const Subheading = styled.h3`
-  font-size: 28px;
+  font-size: 22px;
   color: white;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+  margin: 0 0 50px;
+
+  @media all and (min-width: 400px) {
+    margin: 0 0 75px;
+  }
+
+  @media all and (min-width: 500px) {
+    font-size: 26px;
+  }
 `;
 
 const Header = () => (
   <MainHeader>
     <div>
-      <Title>Lorem 1upsum</Title>
+      <Title>Level upsum</Title>
       <Subheading>Videogame placeholder text</Subheading>
     </div>
   </MainHeader>
