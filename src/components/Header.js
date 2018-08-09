@@ -42,6 +42,7 @@ const Subheading = styled.h3`
   color: white;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
   margin: 0 0 50px;
+  letter-spacing: 1.5px;
 
   @media all and (min-width: 400px) {
     margin: 0 0 75px;
