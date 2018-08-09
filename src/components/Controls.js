@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import arrow from './arrow.svg';
+
 const ControlsForm = styled.div`
   background-color: white;
   box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
@@ -43,13 +45,24 @@ const ControlsForm = styled.div`
 `;
 
 const PlaceholderSelector = styled.select`
-  background-color: transparent;
   border: 3px solid hsl(193, 99%, 47%);
   margin: 0 20px 0 0;
-  padding: 10px 20px;
+  padding: 10px 50px 10px 20px;
   border-radius: 5px;
   font-size: 18px;
   color: hsl(0, 0%, 35%);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  background: url(${arrow}) no-repeat;
+  background-color: transparent;
+  background-size: 15px;
+  background-position: calc(100% - 15px) 17px;
+
+  &::-ms-expand {
+    display: none;
+  }
 
   &:focus {
     outline: none;
@@ -73,7 +86,7 @@ const FormContainer = styled.div`
     height: 1px;
     padding: 0;
     overflow: hidden;
-    clip: rect(0,0,0,0);
+    clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
   }
