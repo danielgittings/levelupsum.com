@@ -30,7 +30,7 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
   /^https:\/\/.*\.cloudfront\.net\/.*/,
   workbox.strategies.cacheFirst({
-    cacheName: 'cdn-js',
+    cacheName: 'cloudfront',
     plugins: [
       new workbox.expiration.Plugin({
         maxEntries: 30,
