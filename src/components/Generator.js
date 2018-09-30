@@ -15,8 +15,8 @@ class Generator extends Component {
     dictionary: [],
     numParagraphs: 1,
     paragraphs: [],
-    pTags: false
-  }
+    pTags: false,
+  };
 
   /**
    * Get a random number between min and max
@@ -25,7 +25,7 @@ class Generator extends Component {
    */
   getRandomNumber = (min, max) => {
     return Math.floor(Math.random() * (max - min) + min);
-  }
+  };
 
   /**
    * Creates text.
@@ -45,11 +45,11 @@ class Generator extends Component {
     for (let paraNum = 1; paraNum <= numParagraphs; paraNum++) {
       const sentences = this.createSentences();
 
-      this.setState(prevState => ({
-        paragraphs: [...prevState.paragraphs, sentences]
+      this.setState((prevState) => ({
+        paragraphs: [...prevState.paragraphs, sentences],
       }));
     }
-  }
+  };
 
   createSentences = () => {
     // Grab the dictionary
@@ -68,13 +68,16 @@ class Generator extends Component {
     // Each array will be its own array of words
     const sentences = [];
 
-    for (let sentenceCounter = 1; sentenceCounter <= numSentences; sentenceCounter++) {
+    for (
+      let sentenceCounter = 1;
+      sentenceCounter <= numSentences;
+      sentenceCounter++
+    ) {
       const sentence = [];
 
       // Get a random number that defines the number of words per sentence
       // For this app we define a sentence as being between 8 and 15 words.
       const numWords = this.getRandomNumber(8, 12);
-
 
       for (let i = 1; i <= numWords; i++) {
         let rand = this.getRandomNumber(0, length + 1);
@@ -86,7 +89,7 @@ class Generator extends Component {
     }
 
     return sentences;
-  }
+  };
 
   /**
    * Resets the paragraph arrays on change
@@ -96,9 +99,9 @@ class Generator extends Component {
    */
   resetParagraphs = () => {
     this.setState({
-      paragraphs: []
+      paragraphs: [],
     });
-  }
+  };
 
   /**
    * Gets the selected number of paragraphs from the front end
@@ -110,42 +113,51 @@ class Generator extends Component {
 
     // Set the value into state and then trigger the createText()
     // function as a callback
-    this.setState({
-      numParagraphs: numParas
-    }, this.createText);
-  }
+    this.setState(
+      {
+        numParagraphs: numParas,
+      },
+      this.createText,
+    );
+  };
 
   toggleTags = (e) => {
     e.preventDefault();
 
     this.setState({
-      pTags: !this.state.pTags
+      pTags: !this.state.pTags,
     });
-  }
+  };
 
   /**
    * Loads the dictionary from imported data
    * on component mount
    */
   componentDidMount() {
-    this.setState({
-      dictionary
-    }, this.createText);
+    this.setState(
+      {
+        dictionary,
+      },
+      this.createText,
+    );
   }
 
   render() {
     return (
       <MainContainer>
-        <Controls numParagraphs={this.state.numParagraphs} toggleTags={this.toggleTags} setNumberOfParagraphs={this.setNumberOfParagraphs} />
-        {
-          this.state.paragraphs.map((item, index) =>
-            <Paragraph
-              key={`paragraph-${index}`}
-              paragraph={index}
-              words={item}
-              pTags={this.state.pTags} />
-            )
-        }
+        <Controls
+          numParagraphs={this.state.numParagraphs}
+          toggleTags={this.toggleTags}
+          setNumberOfParagraphs={this.setNumberOfParagraphs}
+        />
+        {this.state.paragraphs.map((item, index) => (
+          <Paragraph
+            key={`paragraph-${index}`}
+            paragraph={index}
+            words={item}
+            pTags={this.state.pTags}
+          />
+        ))}
       </MainContainer>
     );
   }
