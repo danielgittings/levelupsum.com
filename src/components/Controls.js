@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import arrow from './arrow.svg';
+import arrow from '../img/arrow.svg';
 
 const ControlsForm = styled.div`
   background-color: white;
@@ -92,7 +92,7 @@ const FormContainer = styled.div`
   }
 `;
 
-const Controls = props => (
+const Controls = (props) => (
   <ControlsForm>
     <span>Give me</span>
     <FormContainer>
