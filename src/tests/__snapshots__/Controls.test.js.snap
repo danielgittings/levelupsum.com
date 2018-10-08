@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test component snapshot 1`] = `
+<div
+  className="sc-bdVaJa bcsJsz"
+>
+  <span>
+    Give me
+  </span>
+  <div
+    className="sc-htpNat iHDfqq"
+  >
+    <form
+      onChange={undefined}
+    >
+      <label
+        htmlFor="paragraph-count"
+      >
+        Paragraph count
+      </label>
+      <select
+        className="sc-bwzfXH gPIxFa"
+        id="paragraph-count"
+      >
+        <option
+          value="1"
+        >
+          1
+        </option>
+        <option
+          value="2"
+        >
+          2
+        </option>
+        <option
+          value="3"
+        >
+          3
+        </option>
+        <option
+          value="4"
+        >
+          4
+        </option>
+        <option
+          value="5"
+        >
+          5
+        </option>
+      </select>
+    </form>
+    <span>
+      paragraph
+    </span>
+  </div>
+  <div
+    className="sc-htpNat iHDfqq"
+  >
+    <form
+      onChange={undefined}
+    >
+      <label
+        htmlFor="p-tag-selector"
+      >
+        Paragraph count
+      </label>
+      <select
+        className="sc-bwzfXH gPIxFa"
+        id="p-tag-selector"
+      >
+        <option
+          value="with"
+        >
+          without
+        </option>
+        <option
+          value="without"
+        >
+          with
+        </option>
+      </select>
+    </form>
+    <span>
+      &lt;p&gt;
+       tags
+    </span>
+  </div>
+</div>
+`;
