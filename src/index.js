@@ -5,7 +5,8 @@ import WebFont from 'webfontloader';
 import './normalize.css';
 import './index.css';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+
+import * as serviceWorker from './serviceWorker';
 
 WebFont.load({
   google: {
@@ -18,4 +19,8 @@ if (module.hot) {
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: http://bit.ly/CRA-PWA
+serviceWorker.register();
