@@ -1,0 +1,15 @@
+/* latin */
+@font-face {
+  font-family: 'Luckiest Guy';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Luckiest Guy Regular'), local('LuckiestGuy-Regular'), url(luckiest-guy.woff2) format('woff2');
+}
+
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(open-sans.woff2) format('woff2');
+}
