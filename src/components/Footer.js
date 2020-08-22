@@ -17,7 +17,7 @@ const MainFooter = styled.footer`
     font-size: 0.8rem;
 
     a {
-      color: hsl(193, 99%, 37%);
+      color: hsl(205, 99%, 37%);
       text-decoration: none;
 
       &:hover {
