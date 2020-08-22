@@ -37,7 +37,7 @@ const Title = styled.h1`
   }
 `;
 
-const Subheading = styled.h3`
+const Subheading = styled.h2`
   font-size: 22px;
   color: white;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
